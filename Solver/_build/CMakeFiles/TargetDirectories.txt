@@ -1,6 +1,0 @@
-/home/lis/Sveta1305/workspace/projects/lab03/homework_tmp/Solver/_build/CMakeFiles/rebuild_cache.dir
-/home/lis/Sveta1305/workspace/projects/lab03/homework_tmp/Solver/_build/CMakeFiles/edit_cache.dir
-/home/lis/Sveta1305/workspace/projects/lab03/homework_tmp/Solver/_build/CMakeFiles/solver_lib.dir
-/home/lis/Sveta1305/workspace/projects/lab03/homework_tmp/Solver/_build/CMakeFiles/solver.dir
-/home/lis/Sveta1305/workspace/projects/lab03/homework_tmp/Solver/_build/CMakeFiles/formatter_ex_lib.dir
-/home/lis/Sveta1305/workspace/projects/lab03/homework_tmp/Solver/_build/CMakeFiles/formatter_lib.dir
