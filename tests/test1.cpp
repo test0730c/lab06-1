@@ -1,4 +1,4 @@
-#include <print.cpp>
+#include "../include/print.hpp"
 
 #include <gtest/gtest.h>
 
