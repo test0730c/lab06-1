@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/lis/Sveta1305/workspace/projects/lab06/_build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -146,6 +134,18 @@ package/fast: package
 
 .PHONY : package/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lis/Sveta1305/workspace/projects/lab06/_build/CMakeFiles /home/lis/Sveta1305/workspace/projects/lab06/_build/CMakeFiles/progress.marks
@@ -179,44 +179,110 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named print
+# Target rules for targets named solver_lib
 
 # Build rule for target.
-print: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 print
-.PHONY : print
+solver_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 solver_lib
+.PHONY : solver_lib
 
 # fast build rule for target.
-print/fast:
-	$(MAKE) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/build
-.PHONY : print/fast
+solver_lib/fast:
+	$(MAKE) -f CMakeFiles/solver_lib.dir/build.make CMakeFiles/solver_lib.dir/build
+.PHONY : solver_lib/fast
 
-sources/print.o: sources/print.cpp.o
+#=============================================================================
+# Target rules for targets named solver
 
-.PHONY : sources/print.o
+# Build rule for target.
+solver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 solver
+.PHONY : solver
+
+# fast build rule for target.
+solver/fast:
+	$(MAKE) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/build
+.PHONY : solver/fast
+
+#=============================================================================
+# Target rules for targets named formatter_ex_lib
+
+# Build rule for target.
+formatter_ex_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 formatter_ex_lib
+.PHONY : formatter_ex_lib
+
+# fast build rule for target.
+formatter_ex_lib/fast:
+	$(MAKE) -f formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build
+.PHONY : formatter_ex_lib/fast
+
+#=============================================================================
+# Target rules for targets named formatter_lib
+
+# Build rule for target.
+formatter_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 formatter_lib
+.PHONY : formatter_lib
+
+# fast build rule for target.
+formatter_lib/fast:
+	$(MAKE) -f formatter_lib/CMakeFiles/formatter_lib.dir/build.make formatter_lib/CMakeFiles/formatter_lib.dir/build
+.PHONY : formatter_lib/fast
+
+solver_application/equation.o: solver_application/equation.cpp.o
+
+.PHONY : solver_application/equation.o
 
 # target to build an object file
-sources/print.cpp.o:
-	$(MAKE) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/sources/print.cpp.o
-.PHONY : sources/print.cpp.o
+solver_application/equation.cpp.o:
+	$(MAKE) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver_application/equation.cpp.o
+.PHONY : solver_application/equation.cpp.o
 
-sources/print.i: sources/print.cpp.i
+solver_application/equation.i: solver_application/equation.cpp.i
 
-.PHONY : sources/print.i
+.PHONY : solver_application/equation.i
 
 # target to preprocess a source file
-sources/print.cpp.i:
-	$(MAKE) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/sources/print.cpp.i
-.PHONY : sources/print.cpp.i
+solver_application/equation.cpp.i:
+	$(MAKE) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver_application/equation.cpp.i
+.PHONY : solver_application/equation.cpp.i
 
-sources/print.s: sources/print.cpp.s
+solver_application/equation.s: solver_application/equation.cpp.s
 
-.PHONY : sources/print.s
+.PHONY : solver_application/equation.s
 
 # target to generate assembly for a file
-sources/print.cpp.s:
-	$(MAKE) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/sources/print.cpp.s
-.PHONY : sources/print.cpp.s
+solver_application/equation.cpp.s:
+	$(MAKE) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver_application/equation.cpp.s
+.PHONY : solver_application/equation.cpp.s
+
+solver_lib/solver.o: solver_lib/solver.cpp.o
+
+.PHONY : solver_lib/solver.o
+
+# target to build an object file
+solver_lib/solver.cpp.o:
+	$(MAKE) -f CMakeFiles/solver_lib.dir/build.make CMakeFiles/solver_lib.dir/solver_lib/solver.cpp.o
+.PHONY : solver_lib/solver.cpp.o
+
+solver_lib/solver.i: solver_lib/solver.cpp.i
+
+.PHONY : solver_lib/solver.i
+
+# target to preprocess a source file
+solver_lib/solver.cpp.i:
+	$(MAKE) -f CMakeFiles/solver_lib.dir/build.make CMakeFiles/solver_lib.dir/solver_lib/solver.cpp.i
+.PHONY : solver_lib/solver.cpp.i
+
+solver_lib/solver.s: solver_lib/solver.cpp.s
+
+.PHONY : solver_lib/solver.s
+
+# target to generate assembly for a file
+solver_lib/solver.cpp.s:
+	$(MAKE) -f CMakeFiles/solver_lib.dir/build.make CMakeFiles/solver_lib.dir/solver_lib/solver.cpp.s
+.PHONY : solver_lib/solver.cpp.s
 
 # Help Target
 help:
@@ -224,7 +290,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... package_source"
@@ -232,10 +297,17 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... package"
-	@echo "... print"
-	@echo "... sources/print.o"
-	@echo "... sources/print.i"
-	@echo "... sources/print.s"
+	@echo "... install/strip"
+	@echo "... solver_lib"
+	@echo "... solver"
+	@echo "... formatter_ex_lib"
+	@echo "... formatter_lib"
+	@echo "... solver_application/equation.o"
+	@echo "... solver_application/equation.i"
+	@echo "... solver_application/equation.s"
+	@echo "... solver_lib/solver.o"
+	@echo "... solver_lib/solver.i"
+	@echo "... solver_lib/solver.s"
 .PHONY : help
 
 

@@ -3,34 +3,31 @@ cmake_minimum_required(VERSION 3.4)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(BUILD_EXAMPLES "Build examples" OFF)
+project(solver)
 
-project(print)
+set(Solver_VERSION_MAJOR 0)
+set(Solver_VERSION_MINOR 1)
+set(Solver_VERSION_PATCH 0)
+set(Solver_VERSION_TWEAK 0)
 
-add_library(print STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/print.cpp)
+set(Solver_VERSION
+  ${Solver_VERSION_MAJOR}.${Solver_VERSION_MINOR}.${Solver_VERSION_PATCH}.${Solver_VERSION_TWEAK})
+set(Solver_VERSION_STRING "v${Solver_VERSION}")
 
-target_include_directories(print PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
+add_executable(solver solver_application/equation.cpp)
+
+add_library(solver_lib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/solver_lib/solver.cpp)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib ${CMAKE_CURRENT_BINARY_DIR}/formatter_ex_lib)
+
+target_include_directories( solver PUBLIC 
+${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib/
+${CMAKE_CURRENT_SOURCE_DIR}/solver_lib)
+
+target_link_libraries(solver formatter_ex_lib solver_lib)
+
+install(TARGETS solver
+	RUNTIME DESTINATION bin
 )
 
-if(BUILD_EXAMPLES)
-  file(GLOB EXAMPLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/examples/*.cpp")
-  foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
-    get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
-    add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
-    target_link_libraries(${EXAMPLE_NAME} print)
-    install(TARGETS ${EXAMPLE_NAME}
-      RUNTIME DESTINATION bin
-    )
-  endforeach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
-endif()
-
-install(TARGETS print
-    EXPORT print-config
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-)
-
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
-install(EXPORT print-config DESTINATION cmake)
+include(CPackConfig.cmake)

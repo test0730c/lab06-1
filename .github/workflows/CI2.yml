@@ -1,0 +1,21 @@
+name: CMake
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v3
+
+   - name: Configure Solver
+     run: cmake ${{github.workspace}}/solver_application/ -B ${{github.workspace}}/solver_application/build
+
+   - name: Built Solver
+     run: cmake --build ${{github.workspace}}/solver_application/build
+   - name: Package Solver
+     run: cmake -G "TGZ" ${{github.workspace}}/solver_application/build
