@@ -27,5 +27,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
 
 target_link_libraries(solver formatter_ex_lib solver_lib)
 
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
+install(EXPORT print-config DESTINATION cmake)
 
 include(CPackConfig.cmake)
