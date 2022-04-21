@@ -140,9 +140,9 @@ CMakeFiles/solver_lib.dir/clean:
 # Target rules for target CMakeFiles/solver.dir
 
 # All Build rule for target.
-CMakeFiles/solver.dir/all: formatter_lib/CMakeFiles/formatter_lib.dir/all
-CMakeFiles/solver.dir/all: formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/all
 CMakeFiles/solver.dir/all: CMakeFiles/solver_lib.dir/all
+CMakeFiles/solver.dir/all: formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/all
+CMakeFiles/solver.dir/all: formatter_lib/CMakeFiles/formatter_lib.dir/all
 	$(MAKE) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/depend
 	$(MAKE) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lis/Sveta1305/workspace/projects/lab06/solver_application/_build/CMakeFiles --progress-num=5,6 "Built target solver"
