@@ -1,0 +1,9 @@
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/solver_application/equation.cpp
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/solver_lib/solver.cpp
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/solver_lib/solver.h
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/formatter_ex_lib/formatter_ex.cpp
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/formatter_ex_lib/CMakeLists.txt
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/formatter_ex_lib/formatter_ex.h
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/formatter_lib/formatter.h
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/formatter_lib/CMakeLists.txt
+/home/lis/Sveta1305/workspace/projects/lab06/_build6/_CPack_Packages/Linux/TZ/solver-0.1.0.0-Linux/formatter_lib/formatter.cpp

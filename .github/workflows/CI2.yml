@@ -15,8 +15,8 @@ jobs:
    - name: Configure Solver
      run: cmake ${{github.workspace}}/ -B ${{github.workspace}}/build
 
-   - name: Built Solver
-     run: cmake --build ${{github.workspace}}/build
+   #- name: Built Solver
+    # run: cmake --build ${{github.workspace}}/build
 
    - name: Package Solver
-     run: cmake --build ${{github.workspace}}/build --target ${{github.workspace}}/package
+     run: cmake --build ${{github.workspace}}/build --target ${{github.workspace}}/
