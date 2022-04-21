@@ -1,9 +1,17 @@
 cmake_minimum_required(VERSION 3.4)
 
-project(solver)
-
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(solver)
+
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION_TWEAK 0)
+set(PRINT_VERSION
+  ${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}.${PRINT_VERSION_TWEAK})
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
 
 add_executable(solver equation.cpp)
 
@@ -18,3 +26,8 @@ ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
 
 target_link_libraries(solver formatter_ex_lib solver_lib)
 
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
+install(EXPORT print-config DESTINATION cmake)
+
+
+include(CPackConfig.cmake)
