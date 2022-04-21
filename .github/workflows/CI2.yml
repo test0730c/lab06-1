@@ -17,5 +17,6 @@ jobs:
 
    - name: Built Solver
      run: cmake --build ${{github.workspace}}/build
+
    - name: Package Solver
-     run: cmake -G "TGZ" ${{github.workspace}}/build
+     run: cmake --build ${{github.workspace}}/build --target ${{github.workspace}}/package
