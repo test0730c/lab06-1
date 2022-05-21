@@ -1,0 +1,10 @@
+Architecture: all
+Description: solver application
+ Solves quadratic equations
+Maintainer: satim2502@mail.ru
+Package: solverapp
+Priority: optional
+Section: devel
+Version: 0.1.1
+Installed-Size: 39
+

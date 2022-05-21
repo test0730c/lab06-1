@@ -1,9 +1,0 @@
-f7b14f09b87a0e4f5809d88a4c78cf11  usr/solver_application/equation.cpp
-75244a3f0d34bed4e4aacdca58bfd6f2  usr/formatter_ex_lib/formatter_ex.cpp
-2b085c531f01ef9f3f35cbdc30b10c0a  usr/formatter_ex_lib/CMakeLists.txt
-6b7097e5f499c4933d214b335af79648  usr/formatter_ex_lib/formatter_ex.h
-fb468a0e324225b4d1db27ebb72866e2  usr/solver_lib/solver.cpp
-e2ec2b9bc7706089d1a934cb47b12a12  usr/solver_lib/solver.h
-71ea7a7486ab3436fb57fe536835f9ee  usr/formatter_lib/formatter.h
-14f36eef52d52f721cd370968f7bdebe  usr/formatter_lib/CMakeLists.txt
-6f435456c7ebda402ae0712b15fd64f9  usr/formatter_lib/formatter.cpp

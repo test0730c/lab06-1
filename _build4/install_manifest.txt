@@ -1,9 +1,0 @@
-/usr/solver_application/equation.cpp
-/usr/solver_lib/solver.cpp
-/usr/solver_lib/solver.h
-/usr/formatter_ex_lib/formatter_ex.cpp
-/usr/formatter_ex_lib/CMakeLists.txt
-/usr/formatter_ex_lib/formatter_ex.h
-/usr/formatter_lib/formatter.h
-/usr/formatter_lib/CMakeLists.txt
-/usr/formatter_lib/formatter.cpp
